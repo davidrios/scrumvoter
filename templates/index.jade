@@ -1,0 +1,8 @@
+extends base
+
+block body_blk
+  h1 Sprints
+  p: a(href='/sprint/new') New
+  ul
+    for sprint in sprints
+      li #[a(href='/sprint/{}'.format(sprint.id))= sprint.name] [#[a(href='/sprint/edit/{}'.format(sprint.id)) edit]]

@@ -1,0 +1,13 @@
+extends base
+
+block body_blk
+  h1 Sprint
+  form(method='post')
+    ul
+      if item.id
+        p ID: #{item.id}
+      li: label name
+        input(type='text', name='name', value=item.name or '')
+      li: label date:
+        input(type='text', name='sprint_date', value=item.sprint_date or '')
+    p: input(type='submit')
